@@ -1,0 +1,12 @@
+server:
+  port: 8080
+
+spring:
+  ai:
+    mcp:
+      server:
+        name: todo-mcp-server
+        protocol: streamable
+        version: 1.0.0
+        stdio: false
+        type: sync
