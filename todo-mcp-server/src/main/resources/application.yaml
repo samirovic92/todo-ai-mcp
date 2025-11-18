@@ -1,6 +1,9 @@
 server:
   port: 8080
 
+todo-service:
+  port: 8081
+
 spring:
   ai:
     mcp:

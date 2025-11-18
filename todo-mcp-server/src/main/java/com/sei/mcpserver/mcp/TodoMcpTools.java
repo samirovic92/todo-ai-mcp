@@ -1,7 +1,8 @@
 package com.sei.mcpserver.mcp;
 
-import com.sei.mcpserver.representation.request.CreateTodoRequest;
-import com.sei.mcpserver.representation.response.TodoResponse;
+
+import com.sei.mcpserver.mcp.request.CreateTodoRequest;
+import com.sei.mcpserver.mcp.response.TodoResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springaicommunity.mcp.annotation.McpTool;
 import org.springframework.beans.factory.annotation.Value;
@@ -16,7 +17,7 @@ public class TodoMcpTools {
     private final String baseUrl;
 
     public TodoMcpTools(RestTemplate restTemplate,
-                        @Value("${server.port}") Integer port) {
+                        @Value("${todo-service.port}") Integer port) {
         this.restTemplate = restTemplate;
         this.port = port;
         this.baseUrl =  String.format("http://localhost:%s", port);
