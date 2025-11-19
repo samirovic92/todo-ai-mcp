@@ -1,0 +1,20 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: todo-mcp-client
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+    mcp:
+      client:
+        name: todo-mcp-client
+        version: 1.0.0
+        toolcallback:
+          enabled: true
+        streamable-http:
+          connections:
+            todo:
+              url: http://localhost:8080/mcp
+
